@@ -226,7 +226,7 @@ jobs:
     - name: Package
       run: appimagetool $INSTALLPREFIX linux-source-x86_64.AppImage
     - name: Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4.6.0
       with:
         name: linux-source-x86_64
         path: linux-source-x86_64.AppImage
