@@ -87,12 +87,12 @@ jobs:
         BUILD_AAB: ${{ steps.md.outputs.aab }}
       run: cd love-android && gradle $BUILD_APK $BUILD_AAB
     - name: Artifact (Bundle)
-      uses: actions/upload-artifact@v2
+      uses: actions/actions/upload-artifact@v4.6.0
       with:
         name: android-source-bundle
         path: ${{ steps.md.outputs.aabpath }}
     - name: Artifact (Debug APK)
-      uses: actions/upload-artifact@v2
+      uses: actions/actions/upload-artifact@v4.6.0
       with:
         name: android-source-apk
         path: ${{ steps.md.outputs.apkpath }}
