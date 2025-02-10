@@ -98,7 +98,7 @@ jobs:
         EXTRA_FILES: ${{ steps.exe.outputs.extraFiles }}
       run: copy "game\%EXTRA_FILES%\*" "lovebuild"
     - name: Package & Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4.6.0
       with:
         name: windows-release-${{ matrix.platform }}
         path: lovebuild/
